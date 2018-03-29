@@ -1190,7 +1190,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
     return angle % 180 == 0 ? height : width;
   }
 
-  public Bitmap getRotatedBitmap(Bitmap bitmap) {
+  private Bitmap getRotatedBitmap(Bitmap bitmap) {
     Matrix rotateMatrix = new Matrix();
     rotateMatrix.setRotate(mAngle, bitmap.getWidth() / 2, bitmap.getHeight() / 2);
     return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), rotateMatrix,
@@ -1580,7 +1580,11 @@ import java.util.concurrent.atomic.AtomicBoolean;
     return sampledBitmap;
   }
 
-  /**
+    public float getRotationAngle() {
+        return mAngle;
+    }
+
+    /**
    * Rotate image
    *
    * @param degrees rotation angle
