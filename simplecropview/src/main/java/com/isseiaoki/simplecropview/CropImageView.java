@@ -1364,6 +1364,10 @@ import java.util.concurrent.atomic.AtomicBoolean;
     setImageDrawableInternal(drawable);
   }
 
+  public void updateImageBitmap(Bitmap bitmap) {
+    setImageDrawableInternal(new BitmapDrawable(getResources(), bitmap));
+  }
+
   private void setImageDrawableInternal(Drawable drawable) {
     super.setImageDrawable(drawable);
     updateLayout();
