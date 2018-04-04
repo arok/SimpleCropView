@@ -1249,7 +1249,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
     return cropped;
   }
 
-  private Rect calcCropRect(int originalImageWidth, int originalImageHeight) {
+  public Rect calcCropRect(int originalImageWidth, int originalImageHeight) {
     float scaleToOriginal =
         getRotatedWidth(mAngle, originalImageWidth, originalImageHeight) / mImageRect.width();
     float offsetX = mImageRect.left * scaleToOriginal;
